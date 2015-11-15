@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The main content area on the homepage }}
+<section class="content-home" role="main">
+
+    <article class="content post">
+
+          <h1 class="searching">
+            <a href="{{@blog.url}}/tag/{{tag.slug}}/rss/">{{tag.name}}</a>
+          </h1>
+
+      </article>
+
+      {{! Generic loop shared across all loop based pages }}
+      {{> "loop" }}
+
+</section>
