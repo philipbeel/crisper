@@ -51,8 +51,8 @@ body {
     margin: 0;
 	padding: 0;
 	background-color: #c4c3c1;
-	background-image: url(../img/swatch.jpg);
-	color: #1b1b1b;
+	background-image: url(../img/swatch-alt.png);
+	color: rgb(51, 51, 51);
 	font-size: 16px;
 	font-family: 'Source Sans Pro', sans-serif;
 	background-position: 0 0;
@@ -104,6 +104,7 @@ h6 {
 
 .blog-title a, .blog-title a:hover {
 	text-decoration: none;
+	border-bottom: 0;
 }
 
 .blog-title a:after {
@@ -136,12 +137,7 @@ h6 {
 
 a {
 	color: #c66b07;
-	text-decoration: underline;
-}
-
-a:hover {
-	color: #333;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a, a:hover {
@@ -153,12 +149,12 @@ a, a:hover {
 
 p {
 	margin: 1em 0;
-	line-height: 1.7;
+	line-height: 1.5;
 }
 
 ul, ol {
     margin: 1.6em 0;
-    line-height: 1.7;
+    line-height: 1.5;
 }
 
 ul, ol {
@@ -234,7 +230,6 @@ mark {
 }
 
 code, tt {
-    padding: 2px 4px;
     font-family: "Courier New", monospace, sans-serif;
     white-space: pre;
     border: 1px solid #E3EDF3;
@@ -248,11 +243,8 @@ pre {
     margin: 1.6em 0;
     border: 1px solid #E3EDF3;
     width: 100%;
-    padding: 20px;
-    font-family: "Courier New", monospace, sans-serif;
     white-space: pre;
     overflow: auto;
-    background: #F7FAFB;
     border-radius: 3px;
 }
 
@@ -372,11 +364,17 @@ header nav ul li a {
 	color: #c66b07;
 	padding: 20px 0 18px 0;
 	text-decoration: none;
+	border-bottom: 0;
 }
 
 header nav ul li a:hover {
 	color: #2c2c2c;
 	text-decoration: none;
+	border-bottom: 0;
+}
+
+.site-head a {
+	border-bottom: 0;
 }
 
 .featured .star {
@@ -412,7 +410,7 @@ header nav ul li a:hover {
 
 .post-tags a:hover {
 	color: #474747;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .main-footer {
@@ -436,18 +434,51 @@ header nav ul li a:hover {
 }
 
 a.subscribe-me {
-	background: url(../img/rss.png) 0 0 no-repeat;
-	width: 22px;
-	height: 22px;
+	background: url(../img/icon-rss.png) 0 0 no-repeat;
+	width: 34px;
+	height: 32px;
 	text-indent: -9999em;
 	float: right;
-	opacity: 0.3;
-	filter: alpha(opacity=30);
 }
 
 a.subscribe-me:hover {
-	opacity: 0.8;
-	filter: alpha(opacity=80);
+
+}
+
+a.linkedin-me {
+	background: url(../img/icon-linkedin.png) 0 0 no-repeat;
+	width: 34px;
+	height: 32px;
+	text-indent: -9999em;
+	float: right;
+}
+
+a.linkedin-me:hover {
+
+ }
+
+a.github-me {
+	background: url(../img/icon-github.png) 0 0 no-repeat;
+	width: 34px;
+	height: 32px;
+	text-indent: -9999em;
+	float: right;
+}
+
+a.github-me:hover {
+
+}
+
+a.twitter-me {
+	background: url(../img/icon-twitter.png) 0 0 no-repeat;
+	width: 34px;
+	height: 32px;
+	text-indent: -9999em;
+	float: right;
+}
+
+a.github-me:hover {
+
 }
 
 /* ------------------------------------
@@ -582,8 +613,8 @@ a.more:hover {
 	background: #fff;
 }
 
-.post-template .post img {
-	margin-bottom: 20px;
+.post-image img {
+	border-bottom: 10px solid #c66b07;
 }
 
 .post-template .post .inner {
@@ -622,7 +653,7 @@ h4, h5, h6 {
 
 .share a:hover {
 	color: #474747;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .author,
@@ -637,7 +668,7 @@ h4, h5, h6 {
 }
 
 .author a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .author img {
@@ -691,6 +722,7 @@ h4, h5, h6 {
 .pagination a, .navigation a {
     color: #fff;
     text-decoration: none;
+	border-bottom: 0;
 }
 
 .pagination a:hover, .navigation a:hover {
@@ -836,8 +868,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		background-size: 18px 18px;
 	}
 
-	a.subscribe-me {
-		background-image: url(../img/rss@2x.png);
+	a.subscribe-me,
+	a.linkedin-me,
+	a.github-me,
+	a.twitter-me{
+		width: 22px;
+		height: 22px;
 		background-size: 22px 22px;
 	}
 
@@ -1017,4 +1053,20 @@ a.meanmenu-reveal {
 	padding-top: 50px;
 }
 
+.no-next {
+	display: none;
+}
 
+.content a {
+	color: #c66b07;
+	text-decoration: none;
+	border-bottom: 0.0625rem solid #dcdcdc
+}
+
+.content a:hover {
+	border-bottom: 0.0625rem solid #c66b07
+}
+
+.main-footer {
+	color: #555555;
+}

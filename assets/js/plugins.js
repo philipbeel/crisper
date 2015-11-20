@@ -362,4 +362,6 @@
           showMeanMenu();
         });
     };
+
+    hljs.initHighlightingOnLoad();
 })(jQuery);
