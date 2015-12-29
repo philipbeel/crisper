@@ -1,8 +1,7 @@
-# Casper
+# Crisper
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+Based on Casper, with light modifications
 
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
 
 ## Copyright & License
 
