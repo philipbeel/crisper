@@ -1,5 +1,22 @@
 {
-  "name": "theodin",
-  "version": "1.0.0"
-  "author": "Philip Beel"
+  "name": "crisper",
+  "version": "1.0.1",
+  "description": "The default theme for [Ghost](http://github.com/tryghost/ghost/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philipbeel/crisper.git"
+  },
+  "keywords": [
+    "ghost"
+  ],
+  "author": "philip beel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philipbeel/crisper/issues"
+  },
+  "homepage": "https://github.com/philipbeel/crisper#readme"
 }

@@ -2,67 +2,59 @@
 <html>
 <head>
     {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     {{! Page Meta }}
-    <meta charset="UTF-8" />
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
 
     <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github-gist.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 
-   		<!--[if lt IE 9]>
-        	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    {{>analytics }}
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-
-	<header class="site-head">
-        {{#if @blog.logo}}
-        	<a class="main-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}} Logo" /></a>
-        {{else}}
-        	<div class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></div>
-        {{/if}}
-        <div class="blog-tagline">{{@blog.description}}</div>
-
-        {{navigation }}
-
-	</header>
+<body class="{{body_class}} nav-closed">
 
 
+    <div class="site-wrapper">
 
-	{{! Everything else gets inserted here }}
-	{{{body}}}
+        {{! Everything else gets inserted here }}
+        {{{body}}}
 
-    <footer class="main-footer">
-        <div class="wrapper">
-        	{{>footer }}
-        </div>
-    </footer>
+
+        <footer class="site-footer clearfix">
+            <section class="biography">
+                <p>Technologist based in London. Building scalable solutions for embedded devices. Passionate about Javascript, HbbTV and the open web.</p>
+            </section>
+            <section class="social">
+                <a class="twitter-me" href="https://twitter.com/philipbeel">Twitter @philipbeel</a>
+                <a class="github-me" href="https://github.com/philipbeel">Github</a>
+                <a class="linkedin-me" href="https://uk.linkedin.com/in/philip-beel-55993013">Linkedin</a>
+            </section>
+            <section>
+                <p class="copyright"><a href="/">&copy; {{@blog.title}}</a></p>
+            </section>
+        </footer>
+
+    </div>
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    {{! The main JavaScript files }}
-    <script>
-      if (typeof jQuery == 'undefined') {
-        document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></'+'script>');
-      }
-    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-    <script src="{{asset "js/plugins.min.js"}}"></script>
-    <script src="{{asset "js/scripts.min.js"}}"></script>
-
-
-
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script id="dsq-count-scr" src="//philipbeel.disqus.com/count.js" async></script>
 </body>
 </html>
