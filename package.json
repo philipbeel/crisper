@@ -1,6 +1,6 @@
 {
   "name": "Crisper",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Based on Casper, with light modifications",
   "main": "index.js",
   "scripts": {
