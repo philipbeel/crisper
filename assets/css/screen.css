@@ -790,7 +790,7 @@ body.nav-opened .nav {
 }
 
 .home-template .main-header-content {
-    margin:120px auto 30px;
+    margin:150px auto 30px;
 }
 
 .blog-logo img {
@@ -1663,14 +1663,14 @@ body:not(.post-template) .post-title {
         height: auto;
         min-height: 240px;
         height: 60vh;
-        padding: 10% 0;
+        padding: 10% 0 8% 0;
     }
 
     .scroll-down,
     .home-template .main-header:after { display: none; }
 
     .home-template .main-header-content {
-        margin: 80px auto 0;
+        margin: 100px auto 0;
     }
 
     .archive-template .main-header {
