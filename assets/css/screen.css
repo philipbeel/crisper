@@ -197,6 +197,10 @@ body {
     border-top: 15px solid #1F1D25;
 }
 
+body.home-template {
+    border-top: 0px none;
+}
+
 ::-moz-selection {
     background: rgba(75,198,223,0.4);
 }
@@ -778,6 +782,7 @@ body.nav-opened .nav {
 .home-template .blog-logo {
     text-align: center;
     width: 100%;
+    margin-top: 30px;
 }
 
 .home-template .main-nav {
@@ -1811,6 +1816,11 @@ body:not(.post-template) .post-title {
 
     .blog-logo {
         padding: 5px;
+        margin-top: 30px;
+    }
+
+    .home-template .blog-logo {
+        margin-top: 10px;
     }
 
     .blog-logo img {
