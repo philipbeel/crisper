@@ -21,9 +21,9 @@
         });
 
         hljs.configure({
-            languages: 'javascript'
+            languages: ['javascript']
         });
-        hljs.initHighlighting();
+        hljs.initHighlightingOnLoad();
     });
 
     // Arctic Scroll by Paul Adam Davis
