@@ -20,6 +20,9 @@
             $("body").toggleClass("nav-opened nav-closed");
         });
 
+        hljs.configure({
+            languages: 'javascript'
+        });
         hljs.initHighlightingOnLoad();
     });
 
