@@ -1,6 +1,6 @@
 # Crisper
 
-Based on Casper, with light modifications
+Based on Casper, with light modifications, Ghost V1+ compatible
 
 
 ## Copyright & License
