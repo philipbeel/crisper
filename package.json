@@ -1,5 +1,5 @@
 {
-  "name": "Crisper",
+  "name": "crisper",
   "version": "1.2.3",
   "description": "Based on Casper, with light modifications",
   "main": "index.js",
@@ -13,10 +13,16 @@
   "keywords": [
     "ghost"
   ],
-  "author": "philip beel",
+  "author": {
+    "name": "philip beel",
+    "email": "contact@theodin.co.uk"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/philipbeel/crisper/issues"
   },
-  "homepage": "https://github.com/philipbeel/crisper#readme"
+  "homepage": "https://github.com/philipbeel/crisper#readme",
+  "config": {
+    "posts_per_page": 5
+  }
 }
