@@ -29,10 +29,10 @@
         <footer class="post-footer">
 
         {{! Everything inside the #author tags pulls data from the author }}
-        {{#author}}
+        {{#primary_author}}
 
             {{#if profile_image}}
-            <figure class="author-image">
+            <figure class="author-image kg-width-wide kg-width-full">
                 <a class="img" href="{{url}}" style="background-image: url({{img_url profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
             </figure>
             {{/if}}
@@ -51,7 +51,7 @@
                 </div>
             </section>
 
-        {{/author}}
+        {{/primary_author}}
 
             <section class="share">
                 <h4>Share this post</h4>
