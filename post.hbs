@@ -6,9 +6,11 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if feature_image}}" style="background-image: url({{img_url}}){{else}}no-cover{{/if}}">
+<header class="main-header post-head {{#if feature_image}}"
+    style="background-image: url({{img_url}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}"
+                alt="{{@blog.title}}" /></a>{{/if}}
     </nav>
 </header>
 
@@ -18,7 +20,8 @@
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix=" on "}}
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                {{tags prefix=" on "}}
             </section>
         </header>
 
@@ -28,12 +31,13 @@
 
         <footer class="post-footer">
 
-        {{! Everything inside the #author tags pulls data from the author }}
-        {{#primary_author}}
+            {{! Everything inside the #author tags pulls data from the author }}
+            {{#primary_author}}
 
             {{#if profile_image}}
             <figure class="author-image kg-width-wide kg-width-full">
-                <a class="img" href="{{url}}" style="background-image: url({{img_url profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                <a class="img" href="{{url}}" style="background-image: url({{img_url profile_image}})"><span
+                        class="hidden">{{name}}'s Picture</span></a>
             </figure>
             {{/if}}
 
@@ -41,21 +45,23 @@
                 <h4><a href="{{url}}">{{name}}</a></h4>
 
                 {{#if bio}}
-                    <p>{{bio}}</p>
+                <p>{{bio}}</p>
                 {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                <p>Read <a href="{{url}}">more posts</a> by this author.</p>
                 {{/if}}
                 <div class="author-meta">
                     {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    {{#if website}}<span class="author-link icon-link"><a
+                            href="{{website}}">{{website}}</a></span>{{/if}}
                 </div>
             </section>
 
-        {{/primary_author}}
+            {{/primary_author}}
 
             <section class="share">
                 <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                <a class="icon-twitter"
+                    href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
@@ -64,28 +70,10 @@
                     <span class="hidden">Facebook</span>
                 </a>
                 <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
             </section>
-
-            <div id="disqus_thread"></div>
-            <script>
-            var disqus_config = function () {
-            this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-
-            s.src = '//philipbeel.disqus.com/embed.js';
-
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         </footer>
 
     </article>
