@@ -105,7 +105,7 @@ pre {
   white-space: pre-wrap;
 }
 q {
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: '\201C''\201D''\2018''\2019';
 }
 small {
   font-size: 80%;
@@ -158,9 +158,9 @@ select {
   text-transform: none;
 }
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -168,19 +168,19 @@ button[disabled],
 html input[disabled] {
   cursor: default;
 }
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
-input[type="search"] {
+input[type='search'] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 button::-moz-focus-inner,
@@ -203,20 +203,20 @@ table {
 
 /* Import the font file with the icons in it */
 @font-face {
-  font-family: "casper-icons";
-  src: url("../fonts/casper-icons.eot?v=1");
-  src: url("../fonts/casper-icons.eot?v=1#iefix") format("embedded-opentype"),
-    url("../fonts/casper-icons.woff?v=1") format("woff"),
-    url("../fonts/casper-icons.ttf?v=1") format("truetype"),
-    url("../fonts/casper-icons.svg?v=1#icons") format("svg");
+  font-family: 'casper-icons';
+  src: url('../fonts/casper-icons.eot?v=1');
+  src: url('../fonts/casper-icons.eot?v=1#iefix') format('embedded-opentype'),
+    url('../fonts/casper-icons.woff?v=1') format('woff'),
+    url('../fonts/casper-icons.ttf?v=1') format('truetype'),
+    url('../fonts/casper-icons.svg?v=1#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 /* Apply these base styles to all icons */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "casper-icons", "Open Sans", sans-serif;
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  font-family: 'casper-icons', 'Inter', sans-serif;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -231,36 +231,36 @@ table {
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
 .icon-ghost:before {
-  content: "\f600";
+  content: '\f600';
 }
 .icon-feed:before {
-  content: "\f601";
+  content: '\f601';
 }
 .icon-twitter:before {
-  content: "\f602";
+  content: '\f602';
   font-size: 1.1em;
 }
 .icon-google-plus:before {
-  content: "\f603";
+  content: '\f603';
 }
 .icon-facebook:before {
-  content: "\f604";
+  content: '\f604';
 }
 .icon-arrow-left:before {
-  content: "\f605";
+  content: '\f605';
 }
 .icon-stats:before {
-  content: "\f606";
+  content: '\f606';
 }
 .icon-location:before {
-  content: "\f607";
+  content: '\f607';
   margin-left: -3px; /* Tracking fix */
 }
 .icon-link:before {
-  content: "\f608";
+  content: '\f608';
 }
 .icon-menu:before {
-  content: "\f609";
+  content: '\f609';
 }
 /*
     IMPORTANT: When making any changes to the icon font, be sure to increment
@@ -282,14 +282,14 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   letter-spacing: 0.01rem;
-  font-size: 1.7rem;
-  line-height: 1.65em;
+  font-size: 1.8rem;
+  line-height: 1.7em;
   color: #333;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
   text-rendering: geometricPrecision;
   border-top: 15px solid #1f1d25;
 }
@@ -312,13 +312,13 @@ h3,
 h4,
 h5,
 h6 {
-  -webkit-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
-  -moz-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
-  -o-font-feature-settings: "dlig" 1, "liga" 1, "lnum" 1, "kern" 1;
+  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   color: #2e2e2e;
   line-height: 1.15em;
   margin: 0 0 0.4em 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   text-rendering: geometricPrecision;
 }
 
@@ -362,9 +362,9 @@ p,
 ul,
 ol,
 dl {
-  -webkit-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
-  -moz-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
-  -o-font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+  -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
   margin: 0 0 1.75em 0;
   text-rendering: geometricPrecision;
 }
@@ -437,7 +437,7 @@ blockquote small {
 }
 
 blockquote small:before {
-  content: "\2014 \00A0";
+  content: '\2014 \00A0';
 }
 
 blockquote cite {
@@ -567,7 +567,7 @@ margin on the iframe, cause it breaks stuff. */
 /* Clears shit */
 .clearfix:before,
 .clearfix:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 .clearfix:after {
@@ -650,7 +650,7 @@ body.nav-opened .site-wrapper {
 
 .main-nav a {
   text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Navigation */
@@ -720,7 +720,7 @@ body.nav-opened .nav {
 
 .nav-close:before,
 .nav-close:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   width: 20px;
@@ -781,7 +781,7 @@ body.nav-opened .nav {
 }
 .nav li a:after {
   display: inline-block;
-  content: " .......................................................";
+  content: ' .......................................................';
   color: rgba(255, 255, 255, 0.2);
   margin-left: 5px;
 }
@@ -789,7 +789,7 @@ body.nav-opened .nav {
   color: #fff;
 }
 .nav .nav-current a:after {
-  content: " ";
+  content: ' ';
   border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
   width: 100%;
   height: 1px;
@@ -821,7 +821,7 @@ body.nav-opened .nav {
   color: #111 !important; /* Overides `.nav a:link, .nav a:visited` colour */
   text-align: center;
   font-size: 12px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 35px;
@@ -838,7 +838,7 @@ body.nav-opened .nav {
    on photos which happen to have a light background. */
 .home-template .main-header:after {
   display: block;
-  content: " ";
+  content: ' ';
   width: 150px;
   height: 130px;
   border-radius: 100%;
@@ -990,7 +990,7 @@ body.nav-opened .nav {
   font-size: 5rem;
   letter-spacing: -1px;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #fff;
 }
 
@@ -999,7 +999,7 @@ body.nav-opened .nav {
   font-size: 2rem;
   line-height: 1.5em;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   letter-spacing: 0.01rem;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -1046,7 +1046,7 @@ body.nav-opened .nav {
    just for the lolz and stylepoints. */
 .post:after {
   display: block;
-  content: "";
+  content: '';
   width: 7px;
   height: 7px;
   border: #e7eef2 1px solid;
@@ -1079,7 +1079,7 @@ body:not(.post-template) .post-title {
 .post-meta {
   display: block;
   margin: 1.75rem 0 0 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
   line-height: 2.2rem;
   color: #9eabb3;
@@ -1363,7 +1363,7 @@ body:not(.post-template) .post-title {
 /* Add a little circle in the middle of the border-bottom */
 .author-profile:after {
   display: block;
-  content: "";
+  content: '';
   width: 7px;
   height: 7px;
   border: #e7eef2 1px solid;
@@ -1435,9 +1435,9 @@ body:not(.post-template) .post-title {
 /* Location, website, and link */
 .author-profile .author-meta {
   margin: 2rem 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   letter-spacing: 0.01rem;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 .author-meta span {
   display: inline-block;
@@ -1499,7 +1499,7 @@ body:not(.post-template) .post-title {
 }
 
 .read-next-story:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
@@ -1516,18 +1516,18 @@ body:not(.post-template) .post-title {
 }
 
 .read-next-story .post:before {
-  content: "Read This Next";
+  content: 'Read This Next';
   padding: 4px 10px 5px;
   text-transform: uppercase;
   font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: rgba(255, 255, 255, 0.8);
   border: rgba(255, 255, 255, 0.5) 1px solid;
   border-radius: 4px;
   transition: all 0.5s ease;
 }
 .read-next-story.prev .post:before {
-  content: "You Might Enjoy";
+  content: 'You Might Enjoy';
 }
 
 .read-next-story h2 {
@@ -1610,7 +1610,7 @@ body:not(.post-template) .post-title {
   width: 80%;
   max-width: 710px;
   margin: 4rem auto;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.3rem;
   color: #9eabb3;
   text-align: center;
@@ -1656,7 +1656,7 @@ body:not(.post-template) .post-title {
 }
 .extra-pagination:after {
   display: block;
-  content: "";
+  content: '';
   width: 7px;
   height: 7px;
   border: #e7eef2 1px solid;
@@ -1690,7 +1690,7 @@ body:not(.post-template) .post-title {
   position: relative;
   margin: 8rem 0 0 0;
   padding: 3rem 25px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
   line-height: 1.75em;
   background: #1f1d25;
@@ -1996,16 +1996,17 @@ body:not(.post-template) .post-title {
   ul,
   ol,
   dl {
-    font-size: 0.95em;
+    font-size: 1em;
+    line-height: 1.8em;
     margin: 0 0 2.5rem 0;
   }
 
   .page-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .post-excerpt p {
-    font-size: 0.85em;
+    font-size: 1em;
   }
 
   .page-description {
@@ -2022,7 +2023,6 @@ body:not(.post-template) .post-title {
   }
 
   h1 {
-    font-size: 2.8rem;
     letter-spacing: -1px;
   }
 
