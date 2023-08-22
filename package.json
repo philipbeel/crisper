@@ -1,7 +1,7 @@
 {
   "name": "crisper",
-  "version": "4.2.0",
-  "description": "Based on Casper, with light modifications",
+  "version": "5.0.0",
+  "description": "Based on Casper, with modifications",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/philipbeel/crisper#readme",
   "config": {
     "posts_per_page": 5
+  },
+  "devDependencies": {
+    "prettier": "3.0.2"
   }
 }
