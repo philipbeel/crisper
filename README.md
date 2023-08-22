@@ -2,7 +2,6 @@
 
 Based on Casper, with light modifications, Ghost V1+ compatible
 
-
 ## Copyright & License
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
