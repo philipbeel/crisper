@@ -19,6 +19,7 @@
     12. Media Queries (Mobile)
     13. Animations
     14. Compatability
+    15. Code Highlighting
 
 */
 
@@ -283,7 +284,7 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.01rem;
   font-size: 1.8rem;
   line-height: 1.7em;
@@ -292,7 +293,6 @@ body {
   -moz-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
   text-rendering: geometricPrecision;
-  border-top: 15px solid #1f1d25;
 }
 
 body.home-template {
@@ -674,10 +674,27 @@ body.nav-opened .site-wrapper {
 
 .main-nav a {
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Navigation */
+
+.site-navigation .search {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  color: #EC1946;
+  background: none;
+	border: none;
+	padding: 0 0 0 0;
+  margin:  15px 0 0 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 body.nav-opened .nav-cover {
   position: fixed;
   top: 0;
@@ -853,7 +870,7 @@ body.nav-opened .nav {
   color: #111 !important; /* Overides `.nav a:link, .nav a:visited` colour */
   text-align: center;
   font-size: 12px;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 35px;
@@ -905,7 +922,7 @@ body.nav-opened .nav {
 .home-template .blog-logo {
   text-align: center;
   width: 100%;
-  margin-top: 30px;
+  margin: 20px 0 10px 0;
 }
 
 .home-template .main-nav {
@@ -913,15 +930,15 @@ body.nav-opened .nav {
 }
 
 .home-template .main-header-content {
-  margin: 150px auto 30px;
+  margin: 150px auto 20px;
 }
 
 .blog-logo img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 120px;
-  padding: 1px 0 5px 0;
+  height: 140px;
+  padding: 0px 0 10px 0;
   width: 0 auto;
 }
 
@@ -1051,6 +1068,7 @@ body.nav-opened .nav {
   animation: fade-in-down 0.6s;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
+  padding-top: 10px;
 }
 .home-template .page-description {
   -webkit-animation: fade-in-down 0.9s;
@@ -1106,8 +1124,8 @@ body:not(.post-template) .post-title {
 
 .post-meta {
   display: block;
-  margin: 1.75rem 0 0 0;
-  font-family: "Inter", sans-serif;
+  margin: 1.2rem 0 0 0;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   line-height: 2.2rem;
   color: #9eabb3;
@@ -1191,14 +1209,17 @@ body:not(.post-template) .post-title {
   margin-bottom: 0;
 }
 
-.post-template .post-meta {
-  margin: 0;
-}
-
 .post-template .post-date {
-  padding: 0;
-  margin: 0;
-  border: none;
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 0px;
+  padding-right: 12px;
+  padding-left: 0;
+  border-left: 0px none;
+  border-right: #d5dbde 1px solid;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  white-space: nowrap;
 }
 
 .post-content a {
@@ -1307,11 +1328,6 @@ body:not(.post-template) .post-title {
   color: #111;
 }
 
-/* Create some space to the right for the share links */
-.post-footer .author {
-  margin-right: 180px;
-}
-
 .post-footer h4 a {
   color: #2e2e2e;
   text-decoration: none;
@@ -1348,6 +1364,32 @@ body:not(.post-template) .post-title {
 }
 .post-footer .share .icon-google-plus:hover {
   color: #dd4b39;
+}
+
+
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* Post progress container */
+.progress-container {
+  width: 100%;
+  height: 7px;
+  background: #1f1d25;
+  position: fixed;
+  top: 0;
+  z-index:99;
+}
+
+.progress-bar {
+  height: 7px;
+  background: #EC1946;
+  width: 0%;
 }
 
 /* ==========================================================================
@@ -1451,7 +1493,7 @@ body:not(.post-template) .post-title {
 .author-bio {
   font-size: 1.8rem;
   line-height: 1.5em;
-  font-weight: 200;
+  font-weight: 500;
   color: #50585d;
   letter-spacing: 0;
   text-indent: 0;
@@ -1463,7 +1505,7 @@ body:not(.post-template) .post-title {
 /* Location, website, and link */
 .author-profile .author-meta {
   margin: 2rem 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.01rem;
   font-size: 1.8rem;
 }
@@ -1548,7 +1590,7 @@ body:not(.post-template) .post-title {
   padding: 4px 10px 5px;
   text-transform: uppercase;
   font-size: 1.1rem;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: rgba(255, 255, 255, 0.8);
   border: rgba(255, 255, 255, 0.5) 1px solid;
   border-radius: 4px;
@@ -1638,7 +1680,7 @@ body:not(.post-template) .post-title {
   width: 80%;
   max-width: 710px;
   margin: 4rem auto;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.3rem;
   color: #9eabb3;
   text-align: center;
@@ -1715,68 +1757,50 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 .site-footer {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin: 8rem 0 0 0;
   padding: 3rem 25px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.4rem;
   line-height: 1.75em;
-  background: #1f1d25;
-  color: #e9e8e3;
+  color: #1f1d25;
 }
 
 .site-footer .biography {
   text-align: center;
-}
-
-.site-footer .biography h4 {
-  color: #e9e8e3;
+  margin-top: 20px;
+  max-width: 400px;
+  font-size: 1.5rem;
+  line-height: 1.7em;
 }
 
 .site-footer .social {
   text-align: center;
 }
 
+.site-footer .social a {
+  padding: 10px 0 0 30px;
+  width: 80px;
+  margin: 0 5px 0 5px;
+  font-weight: 500;
+}
+
+
 .site-footer a {
-  color: #e9e8e3;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .site-footer a:hover {
-  border-bottom: #e9e8e3 1px solid;
-}
-
-.poweredby {
-  display: block;
-  width: 45%;
-  float: right;
-  text-align: right;
+  border-bottom: #1f1d25 1px solid;
 }
 
 .copyright {
-  display: block;
-  width: 50%;
-  float: left;
-  font-size: 1rem;
-}
-
-.player-opened .gh-foot {
-  padding-bottom: 240px;
-}
-
-.gh-foot-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.gh-foot-menu {
-  margin-top: 32px;
-}
-
-.gh-copyright {
-  margin-top: 16px;
+  color: rgb(153, 153, 153);
+  margin-top: 15px;
+  font-size: 1.2rem;
 }
 
 /* ==========================================================================
@@ -1810,10 +1834,6 @@ body:not(.post-template) .post-title {
   .paged .main-header {
     min-height: 180px;
     padding: 10% 0;
-  }
-
-  .blog-logo img {
-    padding: 4px 0;
   }
 
   .page-title {
@@ -1948,15 +1968,16 @@ body:not(.post-template) .post-title {
 
   .blog-logo {
     padding: 5px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
-  .home-template .blog-logo {
-    margin-top: 10px;
-  }
 
   .blog-logo img {
     height: 100px;
+  }
+
+  .post-head .main-nav {
+    padding: 15px 10px 0;
   }
 
   .menu-button {
@@ -2110,7 +2131,7 @@ body:not(.post-template) .post-title {
 
   .post-meta {
     font-size: 1.3rem;
-    margin-top: 1rem;
+    margin-top: 1.4rem;
   }
 
   .post-footer {
@@ -2190,6 +2211,16 @@ body:not(.post-template) .post-title {
   .read-next .post {
     width: 100%;
   }
+
+  .site-footer .social a {
+    padding: 10px 0 0 30px;
+    width: 40px;
+    margin: 0 5px 0 5px;
+    font-weight: 500;
+    text-indent: -999px;
+  }
+
+
 }
 
 /* ==========================================================================
@@ -2197,45 +2228,45 @@ body:not(.post-template) .post-title {
    ========================================================================== */
 
 a.linkedin-me {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNjdweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDY3IDY3OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNjcgNjciIHdpZHRoPSI2N3B4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNTAuODM3LDQ4LjEzN1YzNi40MjVjMC02LjI3NS0zLjM1LTkuMTk1LTcuODE2LTkuMTk1ICBjLTMuNjA0LDAtNS4yMTksMS45ODMtNi4xMTksMy4zNzRWMjcuNzFoLTYuNzljMC4wOSwxLjkxNywwLDIwLjQyNywwLDIwLjQyN2g2Ljc5VjM2LjcyOWMwLTAuNjA5LDAuMDQ0LTEuMjE5LDAuMjI0LTEuNjU1ICBjMC40OS0xLjIyLDEuNjA3LTIuNDgzLDMuNDgyLTIuNDgzYzIuNDU4LDAsMy40NCwxLjg3MywzLjQ0LDQuNjE4djEwLjkyOUg1MC44Mzd6IE0yMi45NTksMjQuOTIyYzIuMzY3LDAsMy44NDItMS41NywzLjg0Mi0zLjUzMSAgYy0wLjA0NC0yLjAwMy0xLjQ3NS0zLjUyOC0zLjc5Ny0zLjUyOHMtMy44NDEsMS41MjQtMy44NDEsMy41MjhjMCwxLjk2MSwxLjQ3NCwzLjUzMSwzLjc1MywzLjUzMUgyMi45NTl6IE0zNCw2NCAgQzE3LjQzMiw2NCw0LDUwLjU2OCw0LDM0QzQsMTcuNDMxLDE3LjQzMiw0LDM0LDRzMzAsMTMuNDMxLDMwLDMwQzY0LDUwLjU2OCw1MC41NjgsNjQsMzQsNjR6IE0yNi4zNTQsNDguMTM3VjI3LjcxaC02Ljc4OXYyMC40MjcgIEgyNi4zNTR6IiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojMDA3QUI5OyIvPjwvc3ZnPg==)
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48cGF0aCBkPSJNNDE3LjIgNjRIOTYuOEM3OS4zIDY0IDY0IDc2LjYgNjQgOTMuOVY0MTVjMCAxNy40IDE1LjMgMzIuOSAzMi44IDMyLjloMzIwLjNjMTcuNiAwIDMwLjgtMTUuNiAzMC44LTMyLjlWOTMuOUM0NDggNzYuNiA0MzQuNyA2NCA0MTcuMiA2NHpNMTgzIDM4NGgtNTVWMjEzaDU1djE3MXptLTI1LjYtMTk3aC0uNGMtMTcuNiAwLTI5LTEzLjEtMjktMjkuNSAwLTE2LjcgMTEuNy0yOS41IDI5LjctMjkuNXMyOSAxMi43IDI5LjQgMjkuNWMwIDE2LjQtMTEuNCAyOS41LTI5LjcgMjkuNXpNMzg0IDM4NGgtNTV2LTkzLjVjMC0yMi40LTgtMzcuNy0yNy45LTM3LjctMTUuMiAwLTI0LjIgMTAuMy0yOC4yIDIwLjMtMS41IDMuNi0xLjkgOC41LTEuOSAxMy41VjM4NGgtNTVWMjEzaDU1djIzLjhjOC0xMS40IDIwLjUtMjcuOCA0OS42LTI3LjggMzYuMSAwIDYzLjQgMjMuOCA2My40IDc1LjFWMzg0eiIvPjwvc3ZnPg==)
     0 0 no-repeat;
-  background-size: 32px 32px;
-  width: 34px;
-  height: 32px;
-  text-indent: -9999em;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
   float: right;
 }
 
 a.linkedin-me:hover {
   border-bottom: none;
+  opacity: .8;
 }
 
 a.github-me {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNjdweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDY3IDY3OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNjcgNjciIHdpZHRoPSI2N3B4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNMjAuNTQzLDM0LjU2OWMtMC4wNTQtMC4wMDEsMC41OTIsMS4zNjYsMC42MSwxLjM2NiAgYzEuNDEsMi41MTYsNC4xMjgsNC4wOCw4LjcxMyw0LjUxNGMtMC42NTQsMC40ODgtMS40NCwxLjQxNC0xLjU0OSwyLjQ4NGMtMC44MjMsMC41MjMtMi40NzgsMC42OTYtMy43NjQsMC4yOTcgIGMtMS44MDMtMC41NTktMi40OTMtNC4wNjYtNS4xOTItMy41NjZjLTAuNTg0LDAuMTA3LTAuNDY4LDAuNDg2LDAuMDM3LDAuODA4YzAuODIzLDAuNTI0LDEuNTk3LDEuMTc5LDIuMTk0LDIuNTcyICBjMC40NTksMS4wNywxLjQyMywyLjk4MSw0LjQ3MywyLjk4MWMxLjIxLDAsMi4wNTgtMC4xNDMsMi4wNTgtMC4xNDNzMC4wMjMsMi43MzEsMC4wMjMsMy43OTNjMCwxLjIyNS0xLjY4MiwxLjU3LTEuNjgyLDIuMTU5ICBjMCwwLjIzMywwLjU1NywwLjI1NSwxLjAwNCwwLjI1NWMwLjg4NCwwLDIuNzIzLTAuNzI1LDIuNzIzLTEuOTk4YzAtMS4wMTEsMC4wMTctNC40MTEsMC4wMTctNS4wMDZjMC0xLjMsMC43MDktMS43MTIsMC43MDktMS43MTIgIHMwLjA4OCw2Ljk0LTAuMTY5LDcuODcyYy0wLjMwMiwxLjA5NC0wLjg0NywwLjkzOS0wLjg0NywxLjQyN2MwLDAuNzI2LDIuMjE0LDAuMTc5LDIuOTQ4LTEuNDE2YzAuNTY3LTEuMjM5LDAuMzE5LTguMDUsMC4zMTktOC4wNSAgbDAuNjA1LTAuMDEyYzAsMCwwLjAzNCwzLjExNywwLjAxMyw0LjU0MmMtMC4wMjEsMS40NzYtMC4xMjMsMy4zNDIsMC43NjksNC4yMjJjMC41ODYsMC41NzksMi40ODQsMS41OTQsMi40ODQsMC42NjYgIGMwLTAuNTM5LTEuMDQtMC45ODItMS4wNC0yLjQ0MXYtNi43MTVjMC44MzEsMCwwLjcwNiwyLjIwOCwwLjcwNiwyLjIwOGwwLjA2MSw0LjEwM2MwLDAtMC4xODQsMS40OTQsMS42NDUsMi4xMTkgIGMwLjY0NSwwLjIyMywyLjAyNSwwLjI4MiwyLjA5LTAuMDljMC4wNjUtMC4zNzMtMS42NjItMC45MjgtMS42NzgtMi4wODRjLTAuMDEtMC43MDcsMC4wMzItMS4xMTksMC4wMzItNC4xODcgIGMwLTMuMDY4LTAuNDE5LTQuMjAyLTEuODgtNS4xMDZjNC41MDgtMC40NTUsNy4yOTktMS41NTEsOC42NTgtNC40ODZjMC4xMDYsMC4wMDMsMC41NTUtMS4zNzEsMC40OTYtMS4zNzEgIGMwLjMwNS0xLjEwOCwwLjQ3LTIuNDE5LDAuNTAyLTMuOTcxYy0wLjAwOC00LjIxLTIuMDU4LTUuNjk5LTIuNDUxLTYuMzk4YzAuNTgtMy4xODctMC4wOTgtNC42MzctMC40MTItNS4xMzUgIGMtMS4xNjItMC40MDYtNC4wNDEsMS4wNDUtNS42MTUsMi4wNjZjLTIuNTY0LTAuNzM3LTcuOTg2LTAuNjY2LTEwLjAxOSwwLjE5Yy0zLjc1MS0yLjYzOS01LjczNi0yLjIzNS01LjczNi0yLjIzNSAgcy0xLjI4MywyLjI1OS0wLjMzOSw1LjU2NWMtMS4yMzQsMS41NDYtMi4xNTQsMi42NC0yLjE1NCw1LjUzOUMxOS45MDYsMzEuODMsMjAuMTAyLDMzLjI5MiwyMC41NDMsMzQuNTY5eiBNMzMsNjQgIEMxNi40MzIsNjQsMyw1MC41NjksMywzNFMxNi40MzIsNCwzMyw0czMwLDEzLjQzMSwzMCwzMFM0OS41NjgsNjQsMzMsNjR6IiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojRDhEOUQ4OyIvPjwvc3ZnPg==)
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48ZyBmaWxsPSIjMjMxRjIwIj48cGF0aCBkPSJNMTc4LjM1NCAyODcuNDc4Yy05LjEyMyAwLTE2LjkyOCA0LjIwNy0yMy4yMDEgMTIuODMzLTYuMjkxIDguNDc4LTkuMzk4IDE4Ljk3My05LjM5OCAzMS40MzEgMCAxMi40NzQgMy4xNjYgMjMuMDA4IDkuMzk4IDMxLjUwOSA2LjI3MyA4LjU0IDE0LjAzOSAxMi43NzEgMjMuMjAxIDEyLjc3MSA4LjQ5NCAwIDE1Ljg4OS00LjI3IDIyLjEyMS0xMi43NzEgNi4yNzEtOC41MDEgOS4zOTgtMTkuMDM1IDkuMzk4LTMxLjUwOSAwLTEyLjQxOS0zLjE2Ni0yMi45My05LjM5OC0zMS40MzEtNi4yMzMtOC41ODctMTMuNTY3LTEyLjgzMy0yMi4xMjEtMTIuODMzem0xNTYuMzE0IDBjLTkuMDQ1IDAtMTYuODkxIDQuMjA3LTIzLjE4MiAxMi44MzMtNi4yNzEgOC40NzgtOS4zNTkgMTguOTczLTkuMzU5IDMxLjQzMSAwIDEyLjQ3NCAzLjE4NiAyMy4wMDggOS4zNTkgMzEuNTA5IDYuMjkxIDguNTQgMTQuMDk4IDEyLjc3MSAyMy4xODIgMTIuNzcxIDguNTMzIDAgMTUuOTA2LTQuMjcgMjIuMTc4LTEyLjc3MSA2LjI5My04LjUwMSA5LjQxOC0xOS4wMzUgOS40MTgtMzEuNTA5IDAtMTIuNDE5LTMuMTY0LTIyLjkzLTkuNDE4LTMxLjQzMS02LjI3Mi04LjU4Ny0xMy41NDctMTIuODMzLTIyLjE3OC0xMi44MzN6Ii8+PHBhdGggZD0iTTQ0NS43NzcgMTcyaC0uMDU5czIuNzkzLTE0LjI2NC4zMTQtMzkuMThjLTIuMTgyLTI0LjkxNi03LjQ3MS00Ny44MzgtMTYuMTIzLTY4LjgyIDAgMC00LjQyMi43Ni0xMi43NiAyLjg5NnMtMjIuMDggNi4yOTktNDAuOTM4IDE0Ljc2OGMtMTguNTQxIDguNTQtMzcuOTg2IDE5Ljc4OC01OC4yOTcgMzMuNTA1LTEzLjgwMy0zLjkzNC0zNC40MDgtNS45MzktNjEuOTk0LTUuOTM5LTI2LjI4OSAwLTQ2LjkxNCAyLjAxMi02MS45NzcgNS45NDVDMTQ5LjM1MSA4NC4zMTYgMTEyLjExMSA2Ny4yMyA4MS44NTEgNjRjLTguNTk0IDIwLjk4Mi0xMy44ODMgNDMuOTkxLTE2LjA0NSA2OC45Ny0yLjM5OCAyNC45MzkuNDMyIDM5LjMyOS40MzIgMzkuMzI5QzQxLjk3OSAxOTguNTUxIDMyIDIzNi41NDEgMzIgMjY3Ljc5M2MwIDI0LjI0NC42NTggNDYuMDc4IDYuMTI1IDY1LjQ4IDUuNTY0IDE5LjMxIDEyLjY2MiAzNS4xMyAyMS4wOTggNDcuMjIxIDguNjExIDEyLjEyMSAxOS4wMTIgMjIuNzg4IDMxLjU3NiAzMS45MzggMTIuNDY3IDkuMzE0IDIzLjk4OCAxNS45NjIgMzQuMzg5IDIwLjIxNiAxMC40NjEgNC4zNzIgMjIuMzc1IDcuNjAyIDM1Ljk4MiA5Ljg2MSAxMy4zMyAyLjM4NiAyMy40MzggMy42NDUgMzAuNDc3IDMuOTk2IDAgMCAyOCAxLjQ5NCA2NC4zNTQgMS40OTRzNjQuMjk1LTEuNDk0IDY0LjI5NS0xLjQ5NGM3LjAyLS4zNTIgMTcuMTQ1LTEuNjM0IDMwLjUzNS0zLjk5NiAxMy41NDctMi4yOTkgMjUuNTIxLTUuNjA3IDM1Ljk0MS05Ljg2MSAxMC40MDItNC4yOTMgMjEuOTQzLTEwLjkwMSAzNC40NjktMjAuMjE2IDEyLjUyMy05LjAzMiAyMi45MDYtMTkuNzM5IDMxLjUxOC0zMS45MzggOC40MzYtMTIuMDkxIDE1LjQ5NC0yNy45MTEgMjEuMDk4LTQ3LjIyMSA1LjQ4Ni0xOS40MDIgNi4xNDUtNDEuMzg1IDYuMTQ1LTY1LjYyOUM0ODAgMjM3LjM4OSA0NjkuOTgyIDE5OSA0NDUuNzc3IDE3MnptLTY1LjM5NCAyMzMuNjQ1QzM1Mi41MjEgNDE4LjczNiAzMTEuNDg2IDQyNCAyNTcuMDYxIDQyNGwtMi4xNDMtLjAzOWMtNTQuNDQzIDAtOTUuMzYxLTUuMjQ4LTEyMi44NDgtMTguNDEtMjcuNTA4LTEzLjA5Mi00MS4yNzEtNDAuMDU3LTQxLjI3MS04MC43MzggMC0yNC4zMyA4LjU3Mi00My45OSAyNS40ODItNTkuMTA3IDcuMzU0LTYuNTE1IDE2LjQzOC0xMS4wMTkgMjcuNjQ1LTEzLjcxNyAxMS4xMjktMi41NTggMjEuMzU0LTIuNzYyIDMwLjk2OS0yLjQ2NSA5LjM5OC40MTUgMjIuNTUxIDIuMTk2IDM5LjM0NCAzLjQ2NEMyMzEuMDI5IDI1NC4yODUgMjQzLjUzNSAyNTYgMjU2IDI1NmMxMS42OTggMCAyNy4yMTMtMS45NTcgNTIuMTA0LTMuOTU5IDI0Ljk5LTEuOTcxIDQzLjQ5NC0yLjk3MSA1NS40NjctMSAxMi4yODkgMi4wMDIgMjIuOTg2IDYuMjAyIDMyLjEyOSAxNC43NDIgMTcuNzM0IDE1Ljc1MSAyNi42MDIgMzUuNTA1IDI2LjYwMiA1OS4wODQtLjAwMSA0MC42NjYtMTQuMTM4IDY3LjY3LTQxLjkxOSA4MC43Nzh6Ii8+PC9nPjwvc3ZnPg==)
     0 0 no-repeat;
-  background-size: 32px 32px;
-  width: 34px;
-  height: 32px;
-  text-indent: -9999em;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
   float: right;
 }
 
 a.github-me:hover {
   border-bottom: none;
+  opacity: .8;
 }
 
 a.twitter-me {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNjdweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDY3IDY3OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNjcgNjciIHdpZHRoPSI2N3B4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNMzguMTY3LDIyLjI4M2MtMi42MTksMC45NTMtNC4yNzQsMy40MTEtNC4wODYsNi4xMDEgIGwwLjA2MywxLjAzOGwtMS4wNDgtMC4xMjdjLTMuODEzLTAuNDg3LTcuMTQ1LTIuMTM5LTkuOTc0LTQuOTE1bC0xLjM4My0xLjM3N2wtMC4zNTYsMS4wMTdjLTAuNzU0LDIuMjY3LTAuMjcyLDQuNjYxLDEuMjk5LDYuMjcxICBjMC44MzgsMC44OSwwLjY0OSwxLjAxNy0wLjc5NiwwLjQ4N2MtMC41MDMtMC4xNjktMC45NDMtMC4yOTYtMC45ODUtMC4yMzNjLTAuMTQ2LDAuMTQ5LDAuMzU2LDIuMDc2LDAuNzU0LDIuODM5ICBjMC41NDUsMS4wNiwxLjY1NSwyLjA5NywyLjg3MSwyLjcxMmwxLjAyNywwLjQ4N2wtMS4yMTUsMC4wMjFjLTEuMTczLDAtMS4yMTUsMC4wMjEtMS4wODksMC40NjcgIGMwLjQxOSwxLjM3NywyLjA3NCwyLjgzOSwzLjkxOCwzLjQ3NWwxLjI5OSwwLjQ0NGwtMS4xMzEsMC42NzhjLTEuNjc2LDAuOTc2LTMuNjQ2LDEuNTI2LTUuNjE2LDEuNTY3ICBDMjAuNzc1LDQzLjI1NiwyMCw0My4zNDEsMjAsNDMuNDA1YzAsMC4yMTEsMi41NTcsMS4zOTcsNC4wNDQsMS44NjRjNC40NjMsMS4zNzcsOS43NjUsMC43ODMsMTMuNzQ2LTEuNTY4ICBjMi44MjktMS42NzQsNS42NTctNSw2Ljk3OC04LjIyMWMwLjcxMy0xLjcxNSwxLjQyNS00Ljg1MSwxLjQyNS02LjM1NGMwLTAuOTc1LDAuMDYzLTEuMTAyLDEuMjM2LTIuMjY3ICBjMC42OTItMC42NzgsMS4zNDEtMS40MTksMS40NjctMS42MzFjMC4yMS0wLjQwMywwLjE4OC0wLjQwMy0wLjg4LTAuMDQzYy0xLjc4MSwwLjYzNi0yLjAzMywwLjU1MS0xLjE1Mi0wLjQwMiAgYzAuNjQ5LTAuNjc4LDEuNDI1LTEuOTA3LDEuNDI1LTIuMjY3YzAtMC4wNjMtMC4zMTQsMC4wNDItMC42NzEsMC4yMzNjLTAuMzc3LDAuMjEyLTEuMjE1LDAuNTMtMS44NDQsMC43MmwtMS4xMzEsMC4zNjFsLTEuMDI3LTAuNyAgYy0wLjU2Ni0wLjM4MS0xLjM2MS0wLjgwNS0xLjc4MS0wLjkzMkM0MC43NjYsMjEuOTAyLDM5LjEzMSwyMS45NDQsMzguMTY3LDIyLjI4M3ogTTM0LDY0QzE3LjQzMiw2NCw0LDUwLjU2OCw0LDM0ICBDNCwxNy40MzEsMTcuNDMyLDQsMzQsNHMzMCwxMy40MzEsMzAsMzBDNjQsNTAuNTY4LDUwLjU2OCw2NCwzNCw2NHoiIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiM1OThEQ0E7Ii8+PC9zdmc+)
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48cGF0aCBkPSJNNDkyIDEwOS41Yy0xNy40IDcuNy0zNiAxMi45LTU1LjYgMTUuMyAyMC0xMiAzNS40LTMxIDQyLjYtNTMuNi0xOC43IDExLjEtMzkuNCAxOS4yLTYxLjUgMjMuNUMzOTkuOCA3NS44IDM3NC42IDY0IDM0Ni44IDY0Yy01My41IDAtOTYuOCA0My40LTk2LjggOTYuOSAwIDcuNi44IDE1IDIuNSAyMi4xLTgwLjUtNC0xNTEuOS00Mi42LTE5OS42LTEwMS4zLTguMyAxNC4zLTEzLjEgMzEtMTMuMSA0OC43IDAgMzMuNiAxNy4yIDYzLjMgNDMuMiA4MC43LTE2LS40LTMxLTQuOC00NC0xMi4xdjEuMmMwIDQ3IDMzLjQgODYuMSA3Ny43IDk1LTguMSAyLjItMTYuNyAzLjQtMjUuNSAzLjQtNi4yIDAtMTIuMy0uNi0xOC4yLTEuOCAxMi4zIDM4LjUgNDguMSA2Ni41IDkwLjUgNjcuMy0zMy4xIDI2LTc0LjkgNDEuNS0xMjAuMyA0MS41LTcuOCAwLTE1LjUtLjUtMjMuMS0xLjRDNjIuOCA0MzIgMTEzLjcgNDQ4IDE2OC4zIDQ0OCAzNDYuNiA0NDggNDQ0IDMwMC4zIDQ0NCAxNzIuMmMwLTQuMi0uMS04LjQtLjMtMTIuNUM0NjIuNiAxNDYgNDc5IDEyOSA0OTIgMTA5LjV6Ii8+PC9zdmc+)
     0 0 no-repeat;
-  background-size: 32px 32px;
-  width: 34px;
-  height: 32px;
-  text-indent: -9999em;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
   float: right;
 }
 
 a.twitter-me:hover {
   border-bottom: none;
+  opacity: .8;
 }
 
 #bitnami-banner {
@@ -2295,3 +2326,10 @@ a.twitter-me:hover {
 
 .kg-bookmark-metadata {
 }
+
+
+/* ==========================================================================
+   15. Script highlighting
+   ========================================================================== */
+
+.hljs{display:block;background:white;padding:0.5em;color:#333333;overflow-x:auto;-webkit-text-size-adjust:none}.hljs-comment,.bash .hljs-shebang,.java .hljs-javadoc,.javascript .hljs-javadoc,.rust .hljs-preprocessor{color:#969896}.hljs-string,.apache .hljs-sqbracket,.coffeescript .hljs-subst,.coffeescript .hljs-regexp,.cpp .hljs-preprocessor,.c .hljs-preprocessor,.javascript .hljs-regexp,.json .hljs-attribute,.makefile .hljs-variable,.markdown .hljs-value,.markdown .hljs-link_label,.markdown .hljs-strong,.markdown .hljs-emphasis,.markdown .hljs-blockquote,.nginx .hljs-regexp,.nginx .hljs-number,.objectivec .hljs-preprocessor .hljs-title,.perl .hljs-regexp,.php .hljs-regexp,.xml .hljs-value,.less .hljs-built_in,.scss .hljs-built_in{color:#df5000}.hljs-keyword,.css .hljs-at_rule,.css .hljs-important,.http .hljs-request,.ini .hljs-setting,.haskell .hljs-type,.java .hljs-javadoctag,.javascript .hljs-tag,.javascript .hljs-javadoctag,.nginx .hljs-title,.objectivec .hljs-preprocessor,.php .hljs-phpdoc,.sql .hljs-built_in,.less .hljs-tag,.less .hljs-at_rule,.scss .hljs-tag,.scss .hljs-at_rule,.scss .hljs-important,.stylus .hljs-at_rule,.go .hljs-typename,.swift .hljs-preprocessor{color:#a71d5d}.apache .hljs-common,.apache .hljs-cbracket,.apache .hljs-keyword,.bash .hljs-literal,.bash .hljs-built_in,.coffeescript .hljs-literal,.coffeescript .hljs-built_in,.coffeescript .hljs-number,.cpp .hljs-number,.cpp .hljs-built_in,.c .hljs-number,.c .hljs-built_in,.cs .hljs-number,.cs .hljs-built_in,.css .hljs-attribute,.css .hljs-hexcolor,.css .hljs-number,.css .hljs-function,.haskell .hljs-number,.http .hljs-literal,.http .hljs-attribute,.java .hljs-number,.javascript .hljs-built_in,.javascript .hljs-literal,.javascript .hljs-number,.json .hljs-number,.makefile .hljs-keyword,.markdown .hljs-link_reference,.nginx .hljs-built_in,.objectivec .hljs-literal,.objectivec .hljs-number,.objectivec .hljs-built_in,.php .hljs-literal,.php .hljs-number,.python .hljs-number,.ruby .hljs-prompt,.ruby .hljs-constant,.ruby .hljs-number,.ruby .hljs-subst .hljs-keyword,.ruby .hljs-symbol,.rust .hljs-number,.sql .hljs-number,.puppet .hljs-function,.less .hljs-number,.less .hljs-hexcolor,.less .hljs-function,.less .hljs-attribute,.scss .hljs-preprocessor,.scss .hljs-number,.scss .hljs-hexcolor,.scss .hljs-function,.scss .hljs-attribute,.stylus .hljs-number,.stylus .hljs-hexcolor,.stylus .hljs-attribute,.stylus .hljs-params,.go .hljs-built_in,.go .hljs-constant,.swift .hljs-built_in,.swift .hljs-number{color:#0086b3}.apache .hljs-tag,.cs .hljs-xmlDocTag,.css .hljs-tag,.xml .hljs-title,.stylus .hljs-tag{color:#63a35c}.bash .hljs-variable,.cs .hljs-preprocessor,.cs .hljs-preprocessor .hljs-keyword,.css .hljs-attr_selector,.css .hljs-value,.ini .hljs-value,.ini .hljs-keyword,.javascript .hljs-tag .hljs-title,.makefile .hljs-constant,.nginx .hljs-variable,.xml .hljs-tag,.scss .hljs-variable{color:#333333}.bash .hljs-title,.coffeescript .hljs-title,.cpp .hljs-title,.c .hljs-title,.cs .hljs-title,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo,.ini .hljs-title,.haskell .hljs-title,.haskell .hljs-pragma,.java .hljs-title,.javascript .hljs-title,.makefile .hljs-title,.objectivec .hljs-title,.perl .hljs-sub,.php .hljs-title,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-parent,.ruby .hljs-title,.rust .hljs-title,.xml .hljs-attribute,.puppet .hljs-title,.less .hljs-id,.less .hljs-pseudo,.less .hljs-class,.scss .hljs-id,.scss .hljs-pseudo,.scss .hljs-class,.stylus .hljs-class,.stylus .hljs-id,.stylus .hljs-pseudo,.stylus .hljs-title,.swift .hljs-title,.diff .hljs-chunk{color:#795da3}.coffeescript .hljs-reserved,.coffeescript .hljs-attribute{color:#1d3e81}.diff .hljs-chunk{font-weight:bold}.diff .hljs-addition{color:#55a532;background-color:#eaffea}.diff .hljs-deletion{color:#bd2c00;background-color:#ffecec}.markdown .hljs-link_url{text-decoration:underline}

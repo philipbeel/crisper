@@ -6,6 +6,10 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
 <header class="main-header post-head {{#if feature_image}}"
     style="background-image: url({{img_url}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
@@ -15,13 +19,17 @@
 </header>
 
 <main class="content" role="main">
+
+
     <article class="{{post_class}}">
 
         <header class="post-header">
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-                {{tags prefix=" on "}}
+                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date
+                    format="DD MMMM YYYY"
+                    }}</time>
+                {{tags}}
             </section>
         </header>
 
