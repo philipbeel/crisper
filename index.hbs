@@ -5,6 +5,11 @@
 <header class="main-header {{#if @site.cover_image}}"
     style="background-image: url({{@site.cover_image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav overlay clearfix">
+
+            <div class="site-navigation">
+                <button class="search" aria-label="Search this site" data-ghost-search>{{> "icons/search"}} </button>
+            </div>
+
         {{#if @site.logo}}<a class="blog-logo" href="{{@site.url}}"><img src="{{@site.logo}}"
                 alt="{{@site.title}}" /></a>{{/if}}
     </nav>
