@@ -26,25 +26,32 @@
 </head>
 
 <body class="{{body_class}} nav-closed">
-
-
     <div class="site-wrapper">
+        <header class="main-header post-head no-cover">
+            <nav class="main-nav  clearfix">
+                <a class="blog-logo" href="https://theodin.co.uk"><img src="https://theodin.co.uk/content/images/2023/08/philipbeel-logo-4.svg" alt="Philip Beel, Engineering Manager" /></a>
+            </nav>
 
-        {{! Everything else gets inserted here }}
-        {{{body}}}
-
+        </header>
+        <main class="content" role="main">
+            <article class="post tag-hash-import-2023-08-22-16-42 no-image">
+                <header class="post-header">
+                    <h1 class="post-title">404 - Page not found 😵</h1>
+                </header>
+                <section class="post-content">
+                    <p>The page you are looking for could not be found. Please try use the site search or returning <a href="https://theodin.co.uk">home</a> </p>
+                    <div class="inline-search">
+                        <button aria-label="Search this site" data-ghost-search>{{> "icons/search-dark"}} Search </button>
+                    </div>
+                </section>
+            </article>
+        </main>
 
         <footer class="site-footer clearfix">
             <section class="social">
                 <a class="twitter-me" href="https://twitter.com/philipbeel">Twitter</a>
                 <a class="linkedin-me" href="https://uk.linkedin.com/in/philip-beel-55993013">Linkedin</a>
                 <a class="github-me" href="https://github.com/philipbeel">Github</a>
-            </section>
-
-            <section class="biography">
-                <p>Software Engineering Manager. Empowering teams to create solutions that
-                    are as simple as possible
-                    and as complex as necessary.</p>
             </section>
 
             <section class="copyright">
@@ -56,25 +63,6 @@
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-    <script>
-        (function () {
-            hljs.configure({
-                languages: ['javascript']
-            });
-            hljs.initHighlightingOnLoad();
-
-            window.onscroll = function() {myFunction()};
-
-            function myFunction() {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("myBar").style.width = scrolled + "%";
-            }
-        })();
-    </script>
 </body>
 
 </html>
