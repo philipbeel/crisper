@@ -687,13 +687,34 @@
      width: 30px;
      color: #EC1946;
      background: none;
-       border: none;
-       padding: 0 0 0 0;
+     border: none;
+     padding: 0 0 0 0;
      margin:  15px 0 0 0;
-       font: inherit;
-       cursor: pointer;
-       outline: inherit;
+     font: inherit;
+     cursor: pointer;
+     outline: inherit;
    }
+
+   .inline-search button {
+     border-radius: 3px;
+     border: 2px solid #1d1d1d;
+     color: #1d1d1d;
+     width: 150px;
+     color: #1d1d1d;
+     background: none;
+     padding: 8px 0 3px 2px;
+     margin:  10px 0 0 0;
+     font: inherit;
+     cursor: pointer;
+     outline: inherit;
+   }
+
+   .inline-search:hover button {
+     background: #ec1946;
+     border: 2px solid #ec1946;
+     color: #1d1d1d;
+   }
+
 
    body.nav-opened .nav-cover {
      position: fixed;
